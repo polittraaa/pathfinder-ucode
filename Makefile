@@ -31,7 +31,7 @@ $(OBJD):
 
 clean:
 	@$(MAKE) clean -C $(LIBD)
-    rm -rf $(OBJD)
+	rm -rf $(OBJD)
 	rm -f $(NAME)
 
 uninstall: clean
