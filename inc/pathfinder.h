@@ -45,7 +45,8 @@ void check_first_line(char *firstline);
 void inv_number_arguments();
 void islands_number();
 void is_invalid_line(int idx);
-void is_dup(char *edge);
+bool is_dup(char *edge);
+void dup_bridges(char *island_from, char *island_to);
 
 //printing
 void print_path_between( const char *src_name, const char *dest_name);
