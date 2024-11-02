@@ -20,9 +20,9 @@ all: $(NAME)
 $(NAME): $(OBJF) $(LIBMX)
 	$(CC) $(OBJF) -o $(NAME) $(LDFLAGS)
 
-$(LIBMX):
-	$(MAKE) -C $(LIBD) || { echo "Failed to build libmx"; exit 1; }
-	
+$(LIBMX): 
+	$(MAKE) -C $(LIBD)
+
 $(OBJD)/%.o: $(SRCD)/%.c | $(OBJD)
 	$(CC) $(FLGS) -I $(INCD) -I $(LIBINCD) -c $< -o $@
 
@@ -32,6 +32,7 @@ $(OBJD):
 clean:
 	@$(MAKE) clean -C $(LIBD)
 	rm -rf $(OBJD)
+	rm -f $(OBJF)
 	rm -f $(NAME)
 
 uninstall: clean
