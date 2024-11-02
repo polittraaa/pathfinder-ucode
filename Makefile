@@ -1,4 +1,4 @@
-NAME	= Pathfinder
+NAME	= pathfinder
 
 FLGS	= -std=c11 -Wall -Wextra -Werror -Wpedantic
 LDFLAGS	= -Llibmx -lmx
